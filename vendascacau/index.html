@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+ 
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1340803830494887');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+         src="https://www.facebook.com/tr?id=1340803830494887&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+    <script>
+        window.pixelId = "67dc92f56708768cb26729c1";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cacau Show - Desafio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <!-- Aviso de Frete Grátis -->
+    <div class="aviso-frete">
+        Frete Grátis para todo o Brasil
+    </div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="images/logo-header.png" alt="Logo da Loja">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#"><i class="fas fa-bars"></i></a></li>
+                <li><a href="index.html#"><i class="fas fa-search"></i></a></li>
+                <li><a href="index.html#"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Inicial -->
+    <section class="banner">
+        <h2>Resgate seu desconto exclusivo!</h2>
+        <p>Escolha abaixo e resgate seu desconto.</p>
+    </section>
+
+    <!-- Carrossel de Banners -->
+    <div class="carrossel-banners">
+        <img src="images/banner1.jpg" alt="Banner 1" class="ativo">
+        <img src="images/banner2.jpg" alt="Banner 2">
+        <img src="images/banner3.jpg" alt="Banner 3">
+    </div>
+
+    <!-- Produtos -->
+    <section class="produtos">
+        <!-- Produto 1 -->
+        <div class="produto" onclick="mostrarDetalhes('camiseta1', 'Kit 02 Ovos de páscoa + 02 Garrafas Bella\'s & Chocomonstro 170g', '02 garrafas personalizadas + 02 Ovos de Páscoa', '349,90', '87,90')">
+            <div class="carrossel-produto">
+                <img src="images/camiseta1.jpg" alt="Camiseta 1" class="imagem-carrossel-produto">
+            </div>
+            <h3>Kit 02 Ovos de páscoa + 02 Garrafas Bella's & Chocomonstro 170g</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 349,90</div>
+            <div class="preco-desconto">R$ 87,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>            
+            <div class="estoque">Restam apenas 08 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=4c8fbf46-05a2-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="produto" onclick="mostrarDetalhes('camiseta2', 'Ovo de Páscoa Duo Do Chef de colher - 300g', 'Chocolate ao leite e branco com pistache salgado e caramelo com noz-pecã', '109,90', '37,90')">
+            <div class="carrossel-produto">
+                <img src="images/camiseta2.jpg" alt="Camiseta 2" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa Duo Do Chef de colher - 300g</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 109,90</div>
+            <div class="preco-desconto">R$ 37,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 16 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=8302dfc6-05a2-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="produto" onclick="mostrarDetalhes('chuteira', 'Ovo de Páscoa ao Leite Pantufa Garfield 170g', 'Sabor Chocolate ao leite 170g', '189,90', '47,90')">
+            <div class="carrossel-produto">
+                <img src="images/chuteira.jpg" alt="Chuteira" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa ao Leite 170g + Pantufa Garfield</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 189,90</div>
+            <div class="preco-desconto">R$ 47,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 02 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=b28d4376-05a2-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="produto" onclick="mostrarDetalhes('chuteira2', 'Ovo de Páscoa ao Leite Pantufa Ursinhos Carinhosos Ursinha Carinhosa 170g', 'Sabor Chocolate ao leite 170g', '189,90', '47,90')">
+            <div class="carrossel-produto">
+                <img src="images/chuteira2.jpg" alt="Chuteira 2" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa ao Leite 170g + Pantufa Ursinhos Carinhosos</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 189,90</div>
+            <div class="preco-desconto">R$ 47,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 06 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=e8173618-05a2-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="produto" onclick="mostrarDetalhes('produto5', 'Ovo de Páscoa ao Leite Bytes Fone Azul 200g', 'Sabor Chocolate ao leite 170g', '169,90', '57,90')">
+            <div class="carrossel-produto">
+                <img src="images/produto5.jpg" alt="Produto 5" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa ao Leite Bytes 200g + Fone Azul bluetooth</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 169,90</div>
+            <div class="preco-desconto">R$ 57,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 02 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=3bd9e4c1-05a3-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="produto" onclick="mostrarDetalhes('produto6', 'Ovo de Páscoa do Chef Pistache 600g', 'Casca de chocolate ao leite & Recheio de pistache', '199,90', '49,90')">
+            <div class="carrossel-produto">
+                <img src="images/produto6.jpg" alt="Produto 6" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa do Chef Pistache 600g</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 199,90</div>
+            <div class="preco-desconto">R$ 49,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 08 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=5f1f81c9-05a3-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 7 -->
+        <div class="produto" onclick="mostrarDetalhes('produto7', 'Ovo de Páscoa ao Leite Chocoesportes Bola NBA 170g', 'Sabor Chocolate ao leite 170g', '169,90', '47,90')">
+            <div class="carrossel-produto">
+                <img src="images/produto7.jpg" alt="Produto 7" class="imagem-carrossel-produto">
+            </div>
+            <h3>Ovo de Páscoa ao Leite Chocoesportes 170g + Bola NBA Wilson</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 169,90</div>
+            <div class="preco-desconto">R$ 47,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 05 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=84da60c7-05a3-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+
+        <!-- Produto 8 -->
+        <div class="produto" onclick="mostrarDetalhes('produto8', 'Kit com 02 Ovos de Páscoa + 02 Dinossauros Pelúcia', 'Sabor Chocolate ao leite 170g - 02 unidades', '389,90', '87,90')">
+            <div class="carrossel-produto">
+                <img src="images/produto8.jpg" alt="Produto 8" class="imagem-carrossel-produto">
+            </div>
+            <h3>Kit com 02 Ovos de Páscoa 170g + 02 Dinossauros Pelúcia</h3>
+            <div class="desconto">-80%</div>
+            <div class="preco-original">R$ 389,90</div>
+            <div class="preco-desconto">R$ 87,90</div>
+            <div class="parcelamento"> <img src="images/iconepix.png" alt="Ícone do Pix">7% de desconto no pix</div>    
+            <div class="estoque">Restam apenas 3 unidades</div>
+            <button onclick="window.location.href='https://pagamento.presentecacaushow.site/checkout?product=ab1f7982-05a3-11f0-8fa3-46da4690ad53'" >Comprar</button>
+            <div class="parcelamento">Brinde exclusivo no pagamento!</div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Produto (inicialmente oculto) -->
+    <section class="detalhes-produto" id="detalhes-produto">
+        <div class="logo-detalhes">
+            <img src="images/logo-detalhes.png" alt="Logo da Loja">
+        </div>
+        <div class="carrossel-container">
+            <button class="carrossel-btn prev" onclick="mudarImagem(-1)">n</button>
+            <div class="carrossel">
+                <img src="images/camiseta1.jpg" alt="Imagem 1" id="imagem-carrossel">
+            </div>
+            <button class="carrossel-btn next" onclick="mudarImagem(1)">o</button>
+        </div>
+        <div class="info">
+            <h3 id="nome-produto">Nome do Produto</h3>
+            <p id="descricao-produto">Descrição do produto.</p>
+            <div class="preco-original" id="preco-original">R$ 0,00</div>
+            <div class="preco-desconto" id="preco-desconto">R$ 0,00</div>
+            <div class="parcelamento">até 6x no cartão s/ juros</div>
+            <button id="botao-resgatar">Comprar</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2025 CACAU SHOW LTDA - 47.821.075/0001-05</p>
+        <p>Endereço: Estr. Antiga de Itu, 140 - Estância São Francisco, Itapevi - SP, 06695-570</p>
+        <p>Email: cacaushow@oficial.com</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script>
+        // Script para o carrossel de banners
+        const banners = document.querySelectorAll('.carrossel-banners img');
+        let bannerAtual = 0;
+
+        function trocarBanner() {
+            banners[bannerAtual].classList.remove('ativo');
+            bannerAtual = (bannerAtual + 1) % banners.length;
+            banners[bannerAtual].classList.add('ativo');
+        }
+
+        setInterval(trocarBanner, 3000); // Troca a cada 3 segundos
+    </script>
+
+</body></html>

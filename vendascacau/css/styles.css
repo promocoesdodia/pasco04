@@ -1,0 +1,365 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    line-height: 1.6;
+}
+
+/* Aviso de Frete Grátis */
+.aviso-frete {
+    background-color: #1c1c1b; /* Mesma cor do cabeçalho */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold; /* Negrito */
+    font-size: 1rem;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1c1c1b; /* Fundo preto escuro */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none; /* Removida a linha azul */
+}
+
+header .logo img {
+    max-width: 150px; /* Ajuste o tamanho da logo do cabeçalho */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #fff; /* Ícones brancos */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #131134; /* Efeito ao passar o mouse alterado para #131134 */
+}
+
+/* Banner Inicial */
+.banner {
+    background-color: #1c1c1b; /* Fundo preto escuro */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 1rem; /* Reduzido o padding para deixar mais fino */
+}
+
+.banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+/* Carrossel de Banners */
+.carrossel-banners {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.carrossel-banners img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.carrossel-banners img.ativo {
+    display: block;
+}
+
+/* Produtos */
+.produtos {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: #fff; /* Fundo branco */
+}
+
+.produto {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    width: 48%; /* Ajuste para 2 produtos por linha */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: relative;
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    font-size: 1.2rem;
+    color: #000; /* Texto preto */
+    margin: 0.5rem 0;
+}
+
+.preco-original {
+    font-size: 1rem;
+    color: #999; /* Cor mais transparente */
+    text-decoration: line-through; /* Riscado */
+    margin: 0.25rem 0; /* Espaço reduzido */
+    font-weight: bold; /* Negrito */
+}
+
+.preco-desconto {
+    font-size: 1.5rem;
+    color: #000; /* Texto preto */
+    font-weight: bold; /* Negrito */
+    margin: 0.25rem 0; /* Espaço reduzido */
+    background-color: #fff; /* Fundo branco */
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.parcelamento {
+    font-size: 0.9rem; /* Fonte menor */
+    color: #555; /* Cor cinza */
+    margin: 0.25rem 0; /* Espaço reduzido */
+    font-weight: normal; /* Sem negrito */
+    display: flex; /* Para alinhar a imagem com o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+}
+
+.parcelamento img {
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+.desconto {
+    background-color: #ff0000; /* Fundo vermelho para o desconto */
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold; /* Negrito */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.produto button {
+    background-color: #426700; /* Nova cor do botão */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: block; /* Faz o botão ocupar a linha inteira */
+    width: 100%; /* Largura total */
+}
+
+.produto button:hover {
+    background-color: #365800; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estoque */
+.estoque {
+    background-color: red;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Detalhes do Produto */
+.detalhes-produto {
+    display: none;
+    background-color: #fff; /* Fundo branco */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-detalhes img {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.carrossel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.carrossel {
+    position: relative;
+    width: 80%; /* Ajuste o tamanho do carrossel */
+    margin: 0 auto;
+}
+
+.carrossel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carrossel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* Aumentei o padding para tornar as setas maiores */
+    border-radius: 50%;
+    font-size: 24px; /* Aumentei o tamanho da fonte */
+    user-select: none;
+    z-index: 10; /* Garante que as setas fiquem acima da imagem */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.carrossel-btn.prev {
+    left: -50px; /* Posiciona a seta "anterior" à esquerda da imagem */
+}
+
+.carrossel-btn.next {
+    right: -50px; /* Posiciona a seta "próxima" à direita da imagem */
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Efeito ao passar o mouse */
+}
+
+.info {
+    margin-top: 1rem;
+}
+
+.info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #000; /* Texto preto */
+}
+
+.info p {
+    font-size: 1rem;
+    color: #555; /* Texto cinza */
+    margin-bottom: 1rem;
+}
+
+.info button {
+    background-color: #426700; /* Nova cor do botão */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: block; /* Faz o botão ocupar a linha inteira */
+    width: 100%; /* Largura total */
+}
+
+.info button:hover {
+    background-color: #365800; /* Cor mais escura ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #131134; /* Linha alterada para #131134 */
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produto {
+        width: 48%; /* Ajuste para 2 produtos por linha em mobile */
+    }
+
+    .carrossel-btn {
+        padding: 10px; /* Reduz o tamanho das setas em dispositivos móveis */
+        font-size: 18px;
+    }
+
+    .carrossel-btn.prev {
+        left: -30px;
+    }
+
+    .carrossel-btn.next {
+        right: -30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 100%; /* Ajuste para telas muito pequenas */
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+}
+
+.desconto-pix {
+    display: flex; /* Mantém o ícone e o texto alinhados */
+    align-items: center; /* Centraliza verticalmente */
+    font-size: 0.9rem; /* Ajuste conforme necessário */
+    color: #555; /* Cor do texto */
+    margin-top: 0.25rem; /* Pequeno espaçamento superior */
+}
+
+.desconto-pix img {
+    width: 18px; /* Ajuste o tamanho do ícone */
+    height: 18px;
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}

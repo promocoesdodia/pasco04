@@ -1,0 +1,660 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #ffffff;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.sf-hidden { display: none !important; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: "NotoSans", sans-serif;
+  font-weight: 400;
+  color: #424242;
+  -webkit-font-smoothing: antialiased;
+}
+
+footer, header, main, nav { display: block; }
+
+a {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:active, a:hover { outline: 0; }
+
+a:hover { text-decoration: underline; }
+
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  min-height: 100%;
+  background-color: #faf5ed;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: inherit;
+}
+
+@media (min-width: 600px) {
+  body { font-size: 1.7rem; }
+}
+
+.layout-container {
+  overflow: hidden;
+  padding-top: 0; /* Changed from 50px to ensure header starts at top */
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px !important;
+  min-height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .layout-container { padding-top: 0; /* Changed from 56px */ }
+}
+
+.main-header {
+  transform: translateY(0);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9) !important;
+  margin-top: 0; /* Ensure no margin pushes it down */
+}
+
+.main-header.sticky {
+  transition: 0.25s;
+}
+
+.main-header:before {
+  display: block;
+  content: "";
+  padding-top: 80px;
+  background-color: #180E04;
+}
+
+@media (min-width: 1024px) {
+  .main-header:before { padding-top: 56px; }
+}
+
+.main-header .region-header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  will-change: transform;
+  backface-visibility: hidden;
+  z-index: 2;
+  justify-content: center !important;
+}
+
+.main-header .block-system-branding-block {
+  display: block;
+  position: relative;
+  width: 100px;
+  z-index: 1001;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 0 !important;
+  height: 70px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: end !important;
+}
+
+@media (min-width: 1024px) {
+  .main-header .block-system-branding-block {
+    min-width: 144px;
+    height: 56px;
+  }
+}
+
+.site-logo img {
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 60px !important;
+  object-fit: contain !important;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.main-content .layout-content { padding-bottom: 4rem; }
+
+@media (min-width: 900px) {
+  .main-content .layout-content { padding-bottom: 5.61111vw; }
+}
+
+.main-footer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.footer-wave {
+  position: relative;
+  bottom: -1px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.footer-wave svg {
+  display: block;
+  height: 18.48739vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .footer-wave svg { height: 8.61111vw; }
+}
+
+.region-footer {
+  padding: 10vw 8vmin 5vmin;
+  background-color: #5b2308;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .region-footer {
+    padding: 1em 2vmin 1.5em;
+  }
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 0px 20px 0px 10px;
+  max-width: 100%;
+  height: calc(100vh - 236px);
+  overflow-y: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  width: 100%;
+  padding-top: 100%;
+  cursor: pointer;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background: #180e04;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+  padding: 8px;
+}
+
+.back-face {
+  transform: rotateY(0deg);
+  padding: 20px;
+}
+
+.game-info {
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px !important;
+  color: white;
+  font-weight: bold;
+  background: #195700;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  position: sticky;
+  top: 35px;
+  z-index: 1000;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.game-result {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.game-result.show {
+  opacity: 1;
+}
+
+.result-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 95%;
+  transform: scale(0.7);
+  animation: popIn 0.5s ease forwards;
+}
+
+.result-content h2 {
+  color: #5b2308;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.result-content .game-stats {
+  font-size: 1.3rem;
+  color: #5b2308;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.result-content button {
+  padding: 16px 40px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  background: #5b2308;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s;
+}
+
+.result-content button:hover {
+  background: #7a3e0a;
+}
+
+.result-content #claimPrize {
+  animation: pulse 1.5s infinite;
+}
+
+.result-content #chooseProduct {
+  padding: 15px 30px; /* Larger padding for bigger size */
+  font-size: 2rem; /* Bigger text */
+  font-weight: 700; /* Bolder text */
+  background: #5b2308; /* Matches header/footer */
+  animation: pulse 1.5s infinite; /* Pulsating effect */
+}
+
+.result-content #chooseProduct:hover {
+  background: #7a3e0a;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(91, 35, 8, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(91, 35, 8, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(91, 35, 8, 0);
+  }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.7); }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+  .game-info {
+    font-size: 1rem;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .memory-game {
+    max-width: 1200px;
+  }
+}
+
+/* New adjustments for devices with height <= 800px */
+@media (max-height: 800px) {
+  .layout-container {
+    padding-top: 0; /* Reduce top padding */
+  }
+
+  .game-info {
+    top: 85px; /* Align below header */
+    height: 35px; /* Slightly smaller */
+    font-size: 1rem; /* Smaller text */
+  }
+
+  .memory-game {
+    gap: 5px; /* Reduce space between cards */
+    padding: 10px 10px 5px; /* Less padding, especially at bottom */
+    height: calc(100vh - -100px - 35px - 150px);
+    margin-bottom: 0; /* No extra margin before footer */
+  }
+
+  .memory-card {
+    margin: 0; /* Remove card margins */
+    padding-top: 100%; /* Keep square aspect ratio */
+  }
+}
+/* Add these styles at the end of styles.css */
+
+.winner-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.winner-form.show {
+  opacity: 1;
+}
+
+.form-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  transform: scale(0.7);
+  animation: popIn 0.5s ease forwards;
+}
+
+.form-content h2 {
+  color: #5b2308;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  color: #5b2308;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #5b2308;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #424242;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7a3e0a;
+  box-shadow: 0 0 5px rgba(91, 35, 8, 0.5);
+}
+
+.form-content button {
+  padding: 15px 30px;
+  background: #5b2308;
+  color: white;
+  font-size: 20px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  transition: background 0.3s;
+}
+
+.form-content button:hover {
+  background: #7a3e0a;
+}
+
+.form-content button[type="submit"] {
+  animation: pulse 1.5s infinite;
+}
+
+/* Ensure consistency with existing animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(91, 35, 8, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(91, 35, 8, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(91, 35, 8, 0);
+  }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.7); }
+  80% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-group input:invalid:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.acerto {
+  box-shadow: 0 0 12px 2px green;
+}
+
+.erro {
+  box-shadow: 0 0 12px 2px red;
+}
+
+.dica {
+  animation: piscar 1s ease-in-out;
+}
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+
+#preGameMessage {
+  display: none;
+}
+
+#preGameMessage.show {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+  background-color: #180b00;
+  padding: 10px 10px;
+  border-radius: 8px;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+}
+
+
+.start-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.start-popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 90%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.start-popup-content h2 {
+  font-size: 24px;
+  color: #5b2308;
+  margin-bottom: 10px;
+}
+
+.start-popup-content p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.start-popup-content button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #5b2308;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.start-popup-content button:hover {
+  background: #7a3e0a;
+}
+
+
+
+.game-info {
+  min-height: 40px; /* Garante altura mínima mesmo com mudanças */
+  flex-wrap: wrap;
+}
+
+#timer, #moves {
+  min-width: 120px;
+  text-align: center;
+}
+
+#preGameMessage {
+  flex: 1 0 100%;
+  text-align: center;
+}
+
+
+#preGameMessage {
+  display: none;
+}
+
+#preGameMessage.show {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #130900;
+  padding: 10px 12px;
+  border-radius: 8px;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+}
